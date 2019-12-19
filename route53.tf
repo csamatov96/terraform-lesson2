@@ -3,5 +3,5 @@ resource "aws_route53_record" "devops" {
   name    = "devops.csamatov.net"
   type    = "A"
   ttl     = "300"
-  records = ["${aws_instance.test_ec2.public_ip}"]
+  records = [aws_instance.test_ec2[count.index].public_ip]
 }
