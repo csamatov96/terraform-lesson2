@@ -1,7 +1,7 @@
 resource "aws_security_group" "sg" { #
   name        = "custom_sec_group" #
   description = "Allow SSH / HTTP traffic" #
-  vpc_id      = "vpc-3b472741" #
+  vpc_id      = "vpc-3b472741" #default VPC ID
 
   ingress { #IN
     from_port   = 22 #
@@ -25,9 +25,9 @@ resource "aws_security_group" "sg" { #
   }
 
   tags = {
-        Name = "${var.ENV}"
-        Dept = "${var.Dept}"
-        Created_by = "${var.Created_by}"
+        Name = var.ENV
+        Dept = var.Dept
+        Created_by = var.Created_by
     }
 
 }
