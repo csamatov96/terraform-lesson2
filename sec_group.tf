@@ -28,6 +28,6 @@ resource "aws_security_group" "sg" { #
         Name = var.ENV
         Dept = var.Dept
         Created_by = var.Created_by
-    }
+  }
 
 }
