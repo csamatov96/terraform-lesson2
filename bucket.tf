@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "s3bucket" { #is used for Terraform 
+resource "aws_s3_bucket" "s3bucket" { # 
   bucket = "terraform-lesson2" #variable can't be used
   acl    = "private"
   region = "us-east-1" 
