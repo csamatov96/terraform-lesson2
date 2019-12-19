@@ -4,7 +4,7 @@ resource "aws_instance" "ec2" {
     key_name        = aws_key_pair.key_resource.key_name #full path to NAME
     security_groups = [aws_security_group.sg.name] #name of the resource itself 
     user_data       = file("userdata.sh") #
-    count           = var.count 
+    count           = var.ec_count 
 
     tags = {
         Name = var.ENV
