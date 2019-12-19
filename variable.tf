@@ -8,3 +8,5 @@ variable "instance_type" {}
 variable "ENV" {}
 variable "Dept" {}
 variable "Created_by" {}
+variable "region" {}
+
